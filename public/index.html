@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida sin visa - Experiencia Gastronómica Exclusiva</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #C9A96E;
+            --deep-charcoal: #1A1A1A;
+            --warm-white: #FEFCF8;
+            --accent-copper: #B85D3E;
+            --muted-sage: #8B9B8A;
+            --soft-cream: #F5F2ED;
+            --gradient-luxury: linear-gradient(135deg, #C9A96E 0%, #B85D3E 50%, #8B9B8A 100%);
+            --shadow-soft: 0 20px 60px rgba(26, 26, 26, 0.1);
+            --shadow-elegant: 0 30px 80px rgba(26, 26, 26, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--warm-white);
+            color: var(--deep-charcoal);
+        }
+
+        /* Navbar Styles */
+        .navbar-elegant {
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--muted-sage);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--deep-charcoal);
+            padding: 8px 18px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-gold);
+            background: rgba(201, 169, 110, 0.10);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(201, 169, 110, 0.08);
+            border-radius: 50%;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            animation: elegantFloat 8s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) { 
+            top: 15%; left: 8%; 
+            animation-delay: 0s; 
+        }
+        .floating-element:nth-child(2) { 
+            top: 70%; right: 10%; 
+            animation-delay: 3s; 
+        }
+        .floating-element:nth-child(3) { 
+            bottom: 20%; left: 15%; 
+            animation-delay: 6s; 
+        }
+
+        @keyframes elegantFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(2deg); }
+            66% { transform: translateY(-15px) rotate(-1deg); }
+        }
+
+        .hero-content {
+            color: var(--warm-white);
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            color: #F8F6F3;
+            text-shadow: 
+                0 0 30px rgba(0, 0, 0, 0.8),
+                0 4px 8px rgba(0, 0, 0, 0.6),
+                0 8px 16px rgba(0, 0, 0, 0.4),
+                2px 2px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            color: var(--warm-white);
+            text-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.8),
+                0 4px 12px rgba(0, 0, 0, 0.6),
+                1px 1px 3px rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-luxury {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient-luxury);
+            border: none;
+            padding: 18px 45px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            color: var(--warm-white);
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elegant);
+            color: var(--warm-white);
+        }
+
+        .btn-outline-luxury {
+            font-family: 'Poppins', sans-serif;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--primary-gold);
+            padding: 16px 45px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 8px;
+            color: var(--warm-white);
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn-outline-luxury:hover {
+            background: var(--primary-gold);
+            color: var(--deep-charcoal);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 120px 0;
+            background: var(--soft-cream);
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--deep-charcoal);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--muted-sage);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .feature-card {
+            background: var(--warm-white);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(201, 169, 110, 0.1);
+            height: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elegant);
+        }
+
+        .feature-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-luxury);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 35px;
+            font-size: 2.2rem;
+            color: var(--warm-white);
+        }
+
+        .feature-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--deep-charcoal);
+        }
+
+        .feature-card p {
+            color: var(--muted-sage);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Countries Section */
+        .countries-section {
+            padding: 120px 0;
+            background: var(--deep-charcoal);
+            color: var(--warm-white);
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .country-card {
+            background: rgba(245, 242, 237, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            backdrop-filter: blur(20px);
+        }
+
+        .country-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(201, 169, 110, 0.2);
+            border-color: var(--primary-gold);
+        }
+
+        .country-image {
+            height: 240px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .country-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.9), rgba(184, 93, 62, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .country-card:hover .country-overlay {
+            opacity: 1;
+        }
+
+        .country-flag {
+            font-size: 4rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+
+        .country-info {
+            padding: 35px 30px;
+        }
+
+        .country-info h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+        }
+
+        .country-info p {
+            color: rgba(254, 252, 248, 0.8);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 0;
+            background: var(--warm-white);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            background: var(--gradient-luxury);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--muted-sage);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Reservation Section */
+        .reservation-section {
+            padding: 120px 0;
+            background: var(--gradient-luxury);
+            color: var(--warm-white);
+            text-align: center;
+        }
+
+        .form-container {
+            background: rgba(254, 252, 248, 0.1);
+            padding: 60px;
+            border-radius: 20px;
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(254, 252, 248, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-control, .form-select {
+            background: rgba(254, 252, 248, 0.95);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            color: var(--deep-charcoal);
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: var(--warm-white);
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 0.2rem rgba(201, 169, 110, 0.25);
+            outline: none;
+        }
+
+        /* Footer */
+        .footer-elegant {
+            background: rgba(255,255,255,0.95);
+            color: var(--deep-charcoal);
+            padding: 80px 0 40px;
+        }
+
+        .footer-brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 8px;
+        }
+
+        .footer-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--deep-charcoal);
+            margin-bottom: 48px;
+            max-width: 450px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(201, 169, 110, 0.1);
+            border: 1px solid rgba(201, 169, 110, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-charcoal);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            color: var(--primary-gold);
+            border-color: var(--primary-gold);
+            transform: translateY(-8px);
+        }
+
+        /* Status indicator */
+        .status-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: 500;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .status-connected { background: #28a745; }
+        .status-error { background: #dc3545; }
+        .status-loading { background: #ffc107; color: #000; }
+
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .alert-success {
+            background: rgba(40, 167, 69, 0.1);
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-danger {
+            background: rgba(220, 53, 69, 0.1);
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.hidden {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                padding: 15px 20px;
+                margin: 0 20px 3rem;
+            }
+            
+            .countries-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-container {
+                padding: 40px 30px;
+                margin: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading overlay -->
+    <div id="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Status indicator -->
+    <div id="status" class="status-indicator status-loading">
+        <i class="fas fa-circle"></i> Conectando...
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-elegant">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <div class="brand-text">
+                    <div class="brand-main">Comida sin visa</div>
+                    <div class="brand-subtitle">Fine Dining Experience</div>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paises">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#filosofia">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reservar">Reservar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-decoration">
+            <div class="floating-element">🍽️</div>
+            <div class="floating-element">🥂</div>
+            <div class="floating-element">⭐</div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Comida sin visa</h1>
+                        <p class="hero-subtitle">
+                            Una experiencia gastronómica excepcional donde cada velada es un viaje culinario único. 
+                            Descubra sabores auténticos en un ambiente de lujo incomparable.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#reservar" class="btn-luxury">
+                                <i class="fas fa-concierge-bell me-2"></i>Reservar Experiencia
+                            </a>
+                            <a href="#paises" class="btn-outline-luxury">
+                                <i class="fas fa-compass me-2"></i>Explorar Destinos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="filosofia">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestra Filosofía</h2>
+            <p class="section-subtitle fade-in">Tres pilares fundamentales que definen la excelencia de Comida sin visa</p>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Consultoría Personalizada</h4>
+                        <p>Nuestro equipo de expertos gastronómicos le guiará en la selección del destino culinario perfecto, adaptado a sus preferencias y la ocasión especial.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Preparación Artesanal</h4>
+                        <p>Con 48 horas de anticipación, transformamos nuestro espacio y preparamos ingredientes premium importados directamente de cada región.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>Experiencia Inmersiva</h4>
+                        <p>Cada detalle ha sido cuidadosamente diseñado: desde la ambientación musical hasta la vajilla específica de cada cultura, creando una experiencia inolvidable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="countries-section" id="paises">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--warm-white);">Destinos Culinarios</h2>
+            <div id="countries-container">
+                <div class="text-center">
+                    <div class="spinner" style="margin: 0 auto;"></div>
+                    <p class="mt-3">Cargando destinos...</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 fade-in">
+                <p class="fs-4" style="color: var(--primary-gold);">
+                    <i class="fas fa-globe-americas me-3"></i>
+                    <strong>Destinos culinarios</strong> cuidadosamente seleccionados
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number" data-target="24">24</div>
+                        <div class="stat-label">Destinos Exclusivos</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number" data-target="1200">1200</div>
+                        <div class="stat-label">Experiencias Creadas</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number" data-target="48">48</div>
+                        <div class="stat-label">Horas de Preparación</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number" data-target="100">100</div>
+                        <div class="stat-label">Satisfacción Garantizada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section" id="reservar">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="section-title mb-4 fade-in" style="color: var(--warm-white);">Reserve Su Experiencia</h2>
+                    <p class="mb-5 fs-5 fade-in">
+                        Permítanos crear una experiencia gastronómica excepcional para usted. 
+                        Nuestro equipo se pondrá en contacto para personalizar cada detalle.
+                    </p>
+                    
+                    <div class="form-container fade-in">
+                        <form id="reservationForm">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="nombre_completo" placeholder="Nombre completo *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" name="telefono" placeholder="Teléfono de contacto *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Correo electrónico *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control" name="numero_comensales" placeholder="Número de comensales *" min="1" max="12" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="date" class="form-control" name="fecha_reserva" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" name="pais_experiencia" required>
+                                        <option value="">Seleccione destino culinario *</option>
+                                        <option value="India Maharajá">India Maharajá</option>
+                                        <option value="Italia Renacentista">Italia Renacentista</option>
+                                        <option value="Francia Gastronómica">Francia Gastronómica</option>
+                                        <option value="Japón Imperial">Japón Imperial</option>
+                                        <option value="México Colonial">México Colonial</option>
+                                        <option value="Grecia Clásica">Grecia Clásica</option>
+                                        <option value="Tailandia Real">Tailandia Real</option>
+                                        <option value="China Dinástica">China Dinástica</option>
+                                        <option value="Consulta personalizada">Consulta personalizada</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" name="ocasion_especial" rows="4" placeholder="Ocasión especial, preferencias dietéticas o solicitudes particulares"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-luxury w-100">
+                                        <i class="fas fa-envelope me-2"></i>Solicitar Reserva Exclusiva
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="reservationAlert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section" style="background: var(--soft-cream);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-4">
+                        <h3>Suscríbete a nuestro Newsletter</h3>
+                        <p>Recibe ofertas especiales y novedades gastronómicas</p>
+                    </div>
+                    <form id="newsletterForm" class="d-flex gap-2">
+                        <input type="email" class="form-control flex-grow-1" name="email" placeholder="Tu email aquí..." required>
+                        <input type="text" class="form-control" name="nombre" placeholder="Tu nombre (opcional)" style="max-width: 200px;">
+                        <button type="submit" class="btn-luxury">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="newsletterAlert"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-elegant">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="footer-brand-section">
+                        <div class="footer-brand-text">
+                            <h3 class="footer-brand-title">Comida sin visa</h3>
+                            <p class="footer-brand-subtitle">Fine Dining Experience</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Embárquese en un viaje culinario extraordinario donde cada plato cuenta una historia y cada bocado despierta los sentidos. Descubra sabores auténticos de todo el mundo en un ambiente elegante y sofisticado.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h5 style="color: var(--primary-gold); margin-bottom: 2rem;">Navegación</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" style="color: var(--deep-charcoal); text-decoration: none;">Inicio</a></li>
+                        <li class="mb-2"><a href="#paises" style="color: var(--deep-charcoal); text-decoration: none;">Destinos</a></li>
+                        <li class="mb-2"><a href="#filosofia" style="color: var(--deep-charcoal); text-decoration: none;">Nosotros</a></li>
+                        <li class="mb-2"><a href="#reservar" style="color: var(--deep-charcoal); text-decoration: none;">Reservas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 style="color: var(--primary-gold); margin-bottom: 2rem;">Contacto</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt me-2" style="color: var(--primary-gold);"></i>Av. Arce 2345, Zona Sur<br>La Paz, Bolivia</p>
+                        <p><i class="fas fa-phone-alt me-2" style="color: var(--primary-gold);"></i>+591 2 789-0123</p>
+                        <p><i class="fas fa-envelope me-2" style="color: var(--primary-gold);"></i>info@comidasinvisa.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(201, 169, 110, 0.2); margin: 3rem 0 2rem;">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Comida sin visa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Estado de la aplicación
+        let isConnected = false;
+        
+        // Elementos del DOM
+        const statusIndicator = document.getElementById('status');
+        const loadingOverlay = document.getElementById('loading');
+        const countriesContainer = document.getElementById('countries-container');
+        const reservationForm = document.getElementById('reservationForm');
+        const newsletterForm = document.getElementById('newsletterForm');
+
+        // Función para mostrar/ocultar loading
+        function showLoading(show = true) {
+            loadingOverlay.style.display = show ? 'flex' : 'none';
+        }
+
+        // Función para actualizar el estado de conexión
+        function updateStatus(connected, message = '') {
+            statusIndicator.className = `status-indicator ${connected ? 'status-connected' : 'status-error'}`;
+            statusIndicator.innerHTML = `<i class="fas fa-circle"></i> ${message || (connected ? 'Conectado' : 'Error de conexión')}`;
+            isConnected = connected;
+            
+            // Auto-ocultar el indicador después de 3 segundos si está conectado
+            if (connected) {
+                setTimeout(() => {
+                    statusIndicator.style.opacity = '0.5';
+                    setTimeout(() => {
+                        statusIndicator.style.display = 'none';
+                    }, 500);
+                }, 3000);
+            }
+        }
+
+        // Función para mostrar alertas
+        function showAlert(container, type, message) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2"></i>
+                ${message}
+            `;
+            
+            // Limpiar alertas previas
+            container.innerHTML = '';
+            container.appendChild(alertDiv);
+            
+            // Remover después de 5 segundos
+            setTimeout(() => {
+                if (container.contains(alertDiv)) {
+                    container.removeChild(alertDiv);
+                }
+            }, 5000);
+        }
+
+        // Función para verificar conexión con Supabase
+        async function checkConnection() {
+            try {
+                const response = await fetch('/api/supabase/test');
+                const data = await response.json();
+                
+                if (response.ok && data.status === 'success') {
+                    updateStatus(true, 'Supabase conectado');
+                    return true;
+                } else {
+                    updateStatus(false, 'Error en Supabase');
+                    console.error('Error de conexión:', data);
+                    return false;
+                }
+            } catch (error) {
+                updateStatus(false, 'Error de red');
+                console.error('Error de red:', error);
+                return false;
+            }
+        }
+
+        // Función para cargar países
+        async function loadCountries() {
+            try {
+                const response = await fetch('/api/contenido/paises');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const countries = await response.json();
+                
+                if (!Array.isArray(countries) || countries.length === 0) {
+                    countriesContainer.innerHTML = `
+                        <div class="text-center">
+                            <p>No hay países disponibles en este momento.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const countriesHTML = countries.map(country => `
+                    <div class="country-card">
+                        <div class="country-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="country-overlay">
+                                <span class="country-flag">${country.bandera_emoji || '🍽️'}</span>
+                            </div>
+                        </div>
+                        <div class="country-info">
+                            <h5>${country.nombre}</h5>
+                            <p>${country.descripcion || 'Experiencia culinaria única'}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+                countriesContainer.innerHTML = `<div class="countries-grid">${countriesHTML}</div>`;
+                
+                // Aplicar animaciones
+                observeElements();
+                
+            } catch (error) {
+                console.error('Error al cargar países:', error);
+                countriesContainer.innerHTML = `
+                    <div class="text-center">
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Error al cargar los destinos culinarios. Por favor, recargue la página.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Función para manejar el formulario de reservas
+        async function handleReservation(formData) {
+            try {
+                showLoading(true);
+                
+                const response = await fetch('/api/reservas', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showAlert(
+                        document.getElementById('reservationAlert'), 
+                        'success', 
+                        result.message || 'Reserva enviada exitosamente. Nos pondremos en contacto contigo pronto.'
+                    );
+                    reservationForm.reset();
+                } else {
+                    showAlert(
+                        document.getElementById('reservationAlert'), 
+                        'danger', 
+                        result.error || 'Error al procesar la reserva. Por favor, inténtelo de nuevo.'
+                    );
+                }
+            } catch (error) {
+                console.error('Error al enviar reserva:', error);
+                showAlert(
+                    document.getElementById('reservationAlert'), 
+                    'danger', 
+                    'Error de conexión. Por favor, verifique su conexión a internet e inténtelo de nuevo.'
+                );
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Función para manejar suscripción al newsletter
+        async function handleNewsletter(formData) {
+            try {
+                const response = await fetch('/api/reservas/newsletter', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showAlert(
+                        document.getElementById('newsletterAlert'), 
+                        'success', 
+                        result.message || 'Suscripción exitosa al newsletter.'
+                    );
+                    newsletterForm.reset();
+                } else {
+                    showAlert(
+                        document.getElementById('newsletterAlert'), 
+                        'danger', 
+                        result.error || 'Error al procesar la suscripción.'
+                    );
+                }
+            } catch (error) {
+                console.error('Error en suscripción:', error);
+                showAlert(
+                    document.getElementById('newsletterAlert'), 
+                    'danger', 
+                    'Error de conexión. Por favor, inténtelo de nuevo.'
+                );
+            }
+        }
+
+        // Intersection Observer para animaciones
+        function observeElements() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('hidden');
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observar todos los elementos con animación
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.classList.add('hidden');
+                observer.observe(el);
+            });
+        }
+
+        // Counter animation para estadísticas
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.dataset.target);
+                const suffix = target === 100 ? '%' : target === 48 ? 'h' : '+';
+                let current = 0;
+                const increment = target / 100;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + suffix;
+                    }
+                }, 30);
+            });
+        }
+
+        // Observar sección de estadísticas
+        function observeStats() {
+            const statsSection = document.querySelector('.stats-section');
+            if (!statsSection) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(statsSection);
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Verificar conexión inicial
+            const connected = await checkConnection();
+            
+            if (connected) {
+                // Cargar países si hay conexión
+                await loadCountries();
+            }
+            
+            // Configurar fecha mínima para reservas (hoy)
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.querySelector('input[name="fecha_reserva"]');
+            if (dateInput) {
+                dateInput.min = today;
+            }
+
+            // Inicializar observadores
+            observeElements();
+            observeStats();
+        });
+
+        // Manejar envío del formulario de reservas
+        reservationForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!isConnected) {
+                showAlert(
+                    document.getElementById('reservationAlert'), 
+                    'danger', 
+                    'Error de conexión con el servidor. Por favor, inténtelo más tarde.'
+                );
+                return;
+            }
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Validación básica del lado del cliente
+            if (!data.nombre_completo || !data.telefono || !data.email || !data.numero_comensales || !data.fecha_reserva) {
+                showAlert(
+                    document.getElementById('reservationAlert'), 
+                    'danger', 
+                    'Por favor, complete todos los campos obligatorios.'
+                );
+                return;
+            }
+
+            await handleReservation(data);
+        });
+
+        // Manejar envío del formulario de newsletter
+        newsletterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!isConnected) {
+                showAlert(
+                    document.getElementById('newsletterAlert'), 
+                    'danger', 
+                    'Error de conexión con el servidor.'
+                );
+                return;
+            }
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            if (!data.email) {
+                showAlert(
+                    document.getElementById('newsletterAlert'), 
+                    'danger', 
+                    'Por favor, ingrese su email.'
+                );
+                return;
+            }
+
+            await handleNewsletter(data);
+        });
+
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Ajuste para navbar fijo
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Verificar conexión periódicamente
+        setInterval(checkConnection, 60000); // cada 60 segundos
+    </script>
+</body>
+</html>
